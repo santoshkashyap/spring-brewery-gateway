@@ -13,9 +13,11 @@ public class GoogleConfig {
     @Bean
     public RouteLocator googleRoute(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(r -> r.path("/googlesearch")
-                .uri("https://google.com")
-                .id("google"))
+                .route(
+                        r -> r.path("/googlesearch")
+                        .uri("https://google.com")
+                        .id("google")
+                )
                 .build();
     }
 }
